@@ -22,7 +22,7 @@ let order_pago_id = 0;
 			dataType: "json",
 			//url: "ajax/procesarOrdenCardOpen.php",
 			//url: "ajax/procesarOrdenCardOpenSegurite.php",
-			url: "http://localhost:3001/procesarOrdenOpenpay",
+			url: "http://3.212.162.49/procesarOrdenOpenpay",
 			success	: function(Respuesta)
 			{
 				window.rspt = Respuesta['texto'];
@@ -69,7 +69,7 @@ let order_pago_id = 0;
 
 		$.ajax(
 			{
-				url: "https://jamarrom.d26nunm11amccf.amplifyapp.com/consultarOrdenPago",
+				url: "http://3.212.162.49/consultarOrdenPago",
 				data	:{
 					ordenPago:prodId
 				},
