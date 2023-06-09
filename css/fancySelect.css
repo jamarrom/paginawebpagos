@@ -1,0 +1,135 @@
+div.fancy-select 
+{
+    display: inline-block;
+    width: 100%;
+	margin-bottom: 6px;
+    position: relative;
+    vertical-align: top;
+}
+
+div.fancy-select.disabled 
+{
+ 	opacity: 0.5;
+}
+
+/*div.fancy-select select:focus + div.trigger 
+{
+ 	box-shadow: 0 0 0 2px #4B5468;
+}*/
+
+div.fancy-select select:focus + div.trigger.open 
+{
+ 	box-shadow: none;
+}
+
+div.fancy-select div.trigger 
+{
+ 	width: 100%;
+    height: 31px;
+    font: 14px 'Raleway-Regular';
+    line-height: 16px;
+    color: #005383;
+    text-align: left;
+    background-color: #fff;
+    padding-top: 9px;
+    padding-left: 14px;
+    border: 0px;
+	box-shadow: 0px 5px 9px rgb(0 0 0 / 10%);
+    overflow: hidden;
+	box-sizing: border-box;
+}
+
+div.fancy-select div.trigger:after 
+{
+ 	content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    border-top-color: #a2cd49;
+    top: 13px;
+    right: 13px;
+}
+
+div.fancy-select ul.options 
+{
+	min-width: 100%;
+	max-height: 160px;
+	margin: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	visibility: hidden;
+	z-index: 50;
+	overflow: auto;
+	color: #fff;
+	background-color: #427397;
+	transition: top 300ms ease-out, visibility 300ms ease-out;
+	-webkit-transition: top 300ms ease-out, visibility 300ms ease-out;
+	-moz-transition: top 300ms ease-out, visibility 300ms ease-out;
+	-ms-transition: top 300ms ease-out, visibility 300ms ease-out;
+	-o-transition: top 300ms ease-out, visibility 300ms ease-out;
+	padding-top: 8px;
+}
+
+div.fancy-select ul.options.open 
+{
+	visibility: visible;
+	top: 30px;
+	transition: background 300ms ease-out, top 300ms ease-out;
+	-webkit-transition: background 300ms ease-out, top 300ms ease-out;
+	-moz-transition: background 300ms ease-out, top 300ms ease-out;
+	-ms-transition: background 300ms ease-out, top 300ms ease-out;
+	-o-transition: background 300ms ease-out, top 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing 
+{
+ 	top: auto;
+ 	bottom: 40px;
+ 	transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+ 	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+ 	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+ 	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+ 	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing.open 
+{
+ 	top: auto;
+ 	bottom: 40px;
+ 	transition: opacity 300ms ease-out, bottom 300ms ease-out;
+ 	-webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+ 	-moz-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+ 	-ms-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+ 	-o-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+}
+
+div.fancy-select ul.options li 
+{
+	color: #fff;
+	text-align:	left;
+ 	cursor: pointer;
+ 	white-space: nowrap;
+ 	padding: 8px 12px;
+	padding: 1px 12px;
+	margin-bottom: 6px;
+ 	border-bottom: 0px solid #fafafa;
+ 	transition: all 300ms ease-out;
+ 	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+ 	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+}
+
+div.fancy-select ul.options li.hover 
+{
+	color: #fff;
+	background-color: #9fcc44;
+	transition: all 300ms ease-out;
+	-webkit-transition: all 300ms ease-out;
+	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+	-o-transition: all 300ms ease-out;
+}

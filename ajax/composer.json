@@ -1,0 +1,7 @@
+{
+    "require": {
+        "openpay/sdk": "^3.0",
+        "filp/whoops": "^2.14",
+        "larapack/dd": "1.*"
+    }
+}

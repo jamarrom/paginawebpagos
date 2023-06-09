@@ -1,0 +1,256 @@
+/* 7.2.2 - Booking Calendar */
+#ui-datepicker-div
+{
+ 	color: #fff;
+	padding: 20px;
+ 	background: #437397;
+ 	-moz-box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+ 	-webkit-box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+	border:0px solid !important;
+}
+
+.ui-datepicker 
+{
+  	display: none;
+}
+
+#ui-datepicker-div a 
+{
+  	color: #fff;
+  	text-decoration: none;
+}
+
+#ui-datepicker-div .ui-datepicker-calendar tbody tr td a 
+{
+  	width: 25px;
+}
+
+.ui-datepicker-calendar tbody tr td a 
+{
+	display: block;
+ 	height: 18px;
+ 	padding: 7px 0 0 0;
+ 	text-align: center;
+ 	border-right: 1px solid;
+ 	border-bottom: 1px solid;
+}
+
+.ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable 
+{
+ 	background: transparent;
+}
+
+.datepicker, .datepicker2 
+{
+	height: 31px;
+    color: #005383;
+    font: 14px 'Raleway-Regular';
+    background: url(../images/date_icon.png) #f2f2f2 no-repeat 117px center;
+    box-shadow: 0px 5px 9px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+	padding-left: 14px;
+	border: 0px;
+}
+}
+
+.ui-datepicker-title 
+{
+ 	font-family: 'Raleway-SemiBold';
+ 	text-align: center;
+ 	padding: 0 0 5px 0;
+}
+
+.ui-datepicker-header 
+{
+ 	padding: 0 0 10px 0;
+ 	position: relative;
+}
+
+.ui-datepicker-prev 
+{
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+}
+
+.ui-datepicker-next 
+{
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+}
+
+.ui-datepicker-calendar thead tr th 
+{
+ 	font-family: 'Raleway-SemiBold';
+ 	padding: 10px 0;
+ 	margin: 0 0 10px 0;
+ 	border-top: 1px solid;
+ 	border-bottom: 1px solid;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next 
+{
+ 	cursor: pointer;
+}
+
+.ui-datepicker-prev 
+{
+	display: block;
+ 	width: 20px;
+ 	height: 20px;
+ 	background: url("../images/date_arrows.png") no-repeat -10px 2px #fff; 	
+ 	-webkit-border-radius: 99%; 
+ 	-moz-border-radius: 99%;
+ 	-o-border-radius: 99%;
+ 	-ms-border-radius: 99%;
+ 	border-radius: 99%;
+ 	text-indent: -9999px;
+ 	behavior:url('PIE/PIE.htc');
+}
+
+.ui-datepicker-next 
+{
+ 	display: block;
+ 	width: 20px;
+ 	height: 20px;
+ 	background: url("../images/date_arrows.png") no-repeat -88px 2px #fff;
+ 	-webkit-border-radius: 99%; 
+ 	-moz-border-radius: 99%;
+ 	-o-border-radius: 99%;
+ 	-ms-border-radius: 99%;
+ 	border-radius: 99%;
+ 	text-indent: -9999px;
+}
+
+/* 7.2.3 - Open Booking Calendar */
+
+.ui-datepicker-calendar 
+{
+ 	width: 50%;
+ 	font-size: 13px;
+}
+
+.ui-datepicker-calendar a 
+{
+ 	color: #fff;
+ 	text-decoration: none;
+}
+
+.ui-datepicker-title 
+{
+ 	font: 13px 'Raleway-SemiBold';
+ 	padding: 5px 0 5px 0;
+}
+
+.ui-datepicker-header 
+{
+ 	padding: 0 0 20px 0;
+}
+
+.ui-datepicker-calendar tbody 
+{
+ 	margin: 20px 0 0 0;
+}
+
+.ui-datepicker-group
+{
+ 	width: 250px;
+ 	float: left;
+}
+
+.ui-datepicker-calendar .ui-datepicker-unselectable .ui-state-default
+{
+	display: block;
+ 	border-right: 1px solid;
+ 	border-bottom: 1px solid;
+ 	text-align: center;
+}
+
+.ui-state-disabled .ui-state-default 
+{
+ 	height: 23px;
+ 	padding-top: 7px;	
+}
+
+.ui-datepicker-calendar 
+{
+ 	width: 100% !important;
+}
+
+.ui-datepicker-group-first 
+{
+ 	float: left;
+ 	border-right: 1px solid;
+ 	padding: 0 20px 0 0;
+}
+
+.ui-datepicker-group-last 
+{
+ 	float: right;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next 
+{
+	width: 25px;
+	height: 25px;
+}
+
+.ui-datepicker-prev 
+{
+ 	background: url("../images/date_arrows.png") no-repeat -8px 4px #fff;
+}
+
+.ui-datepicker-next 
+{
+ 	background: url("../images/date_arrows.png") no-repeat -86px 4px #fff;
+}
+
+.ui-datepicker-calendar tbody tr td a,
+.ui-datepicker-calendar .ui-datepicker-unselectable .ui-state-default 
+{
+ 	border-color: #437397;
+}
+
+
+.ui-datepicker-calendar tbody tr td a.ui-state-highlight
+{
+	font-family: 'Raleway-Bold';
+}
+
+/* Gold Colour Elements */
+.ui-tabs .ui-tabs-nav li.ui-state-active
+{
+ 	border-color: #9fcc44;
+}
+
+.ui-state-active
+{
+ 	background: #9fcc44 !important; 
+}
+
+.ui-datepicker-calendar tbody tr td a:hover,
+.ui-datepicker-calendar .dp-highlight .ui-state-default
+{
+ 	background: #9fcc44;
+}
+
+.ui-datepicker-calendar tbody tr td a 
+{
+ 	background: #437397;
+}
+
+.ui-datepicker-calendar thead tr th
+{
+ 	border-color: #424242;
+}
+
+.ui-datepicker-calendar .ui-datepicker-unselectable .ui-state-default 
+{
+	width: 25px;
+	background: #437397;
+    color: #ffffff;
+}

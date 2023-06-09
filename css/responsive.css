@@ -1,0 +1,677 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media only screen and (max-width: 1200px)
+{
+	.Header-Center {
+		padding: 0px 20px;
+	}
+
+	.Fase-Center {
+		padding: 0px 20px;
+	}
+
+	.Footer-Center {
+		padding: 0px 20px;
+	}
+
+	.Fase-Item--2 .Fase-Center {
+		padding: 0px 20px !important
+	}
+}
+
+@media only screen and (max-width: 1100px)
+{
+	.Fase-Item--1 {
+		background-position: 0px 0px;
+	}
+}
+
+@media only screen and (max-width: 1024px)
+{
+	.Header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.Logo {
+		width: 201px;
+	}
+
+	.Fase-Item--1 .Fase-Center {
+		top: 17% !important;
+	}
+
+	.Footer {
+		bottom: 25px;
+	}
+}
+
+@media only screen and (max-width: 1000px)
+{
+	.MainMenu-Item {
+		font-size: 12px;
+		margin-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 870px)
+{
+	.Fase-Item--2 {
+		background: #008351;
+	}
+
+	.Fase-Item--2 .Fase-Center {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 840px)
+{
+	.Fase-Item--4 {
+		background: #ffffff;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 800px)
+{
+	.Fase-Item--1 {
+		background: #024673;
+	}
+
+	.Fase-Item--1 .Fase-Center {
+		top: 15% !important;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+		top: 17% !important;
+	}
+}
+
+@media only screen and (max-width: 790px)
+{
+	.MenuAlterno-Ocultar
+	{
+		display: none !important;
+	}
+
+	.MainMenu-IcoMenu
+	{
+		display: inline-block;
+		margin-top: 0px;
+		float: right;
+	}
+
+	.MainMenu-List
+ 	{
+  		display: none;
+		width: 68%;
+		height: auto;
+		background: #000;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-left: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		position: absolute;
+		z-index: 9999;
+		top: 45px;
+	    left: initial;
+		right: 20px;
+		behavior: url("../PIE/PIE.htc");
+ 	}
+
+	.MainMenu-List li
+ 	{
+  		width:100%;
+	    background: none;
+  		margin-right:0px;
+ 	}
+
+	.MainMenu-List li a
+ 	{
+  		display:block;
+  		width: 100%;
+		 	height: 30px;
+		 	font-size: 14px;
+  		color:#ffffff !important;
+			background: #000;
+  		text-align:left;
+  		border-bottom: 0px;
+  		padding:2px;
+	    padding-top: 7px;
+	  	padding-left: 20px;
+			margin-left: 0px;
+	  	margin-right: 0px;
+	    -webkit-box-sizing: border-box;
+	    -o-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	    box-sizing: border-box;	
+	}
+
+	.MainMenu-List li a:hover, .MainMenu-List li a.activo
+	{
+		color: #fff !important;
+	    background: #9fcc44;
+	}
+
+	.MainMenu-List.seleccionar
+ 	{
+  		display:block;
+	}
+}
+
+@media only screen and (max-width: 740px)
+{
+	html, body {
+		height: auto;
+	}
+
+	.Header {
+		padding-top: 15px !important;
+		padding-bottom: 15px !important;
+	}
+
+	.Logo {
+		width: 181px;
+		height: 32px;
+	}
+
+	.Fase-Item--1
+	{
+		background-position: revert;
+	}
+
+	.Fase-Item--3 {
+		background: #fff;
+	}
+
+	.Fase-Item--1 .Fase-Center {
+		max-width: 222px;
+		top: 75px !important;
+		padding: 0px;
+	}
+
+	.Fase-Item--3 .Fase-Center {
+		top: 54px !important;
+		text-align: center;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+		top: 75px !important;
+	}
+
+	.bx-wrapper {
+		height: 654px !important;
+	}
+	
+	.Fase-Title {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	.Fase-Title strong.Hacemos {
+		font-size: 28.23px;
+	}
+
+	.Fase-Title span {
+		font-size: 40.37px;
+	}
+
+	body {
+		background: #ffffff;
+	}
+
+	body.Etapa2 {
+		background: #008351;
+	}
+
+	body.Etapa3 {
+		background: #014461;
+	}
+
+	body.Etapa4 {
+		background: #004976
+	}
+
+	.Header {
+		z-index: 2;
+	}
+
+	.bx-wrapper {
+		height: initial !important;
+		min-height: 500px !important;
+		padding-bottom: 0px;
+		z-index: 1;
+	}
+
+	.bx-viewport {
+		height: initial !important;
+		min-height: 500px !important;
+		overflow: initial !important;
+	}
+
+	.slider {
+		height: initial !important;
+	}
+
+	.Fase-Item {
+		height: initial !important;
+	}
+
+	.Fase-Item--1 .Fase-Center {
+		top: 95px !important;
+		padding-bottom: 150px;
+	}
+
+	.Fase-Item--2 .Fase-Center {
+		top: 95px !important;
+		padding-bottom: 180px !important;
+	}
+
+	.Fase-Item--3 .Fase-Center {
+		padding-bottom: 150px;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+    	padding-bottom: 130px;
+	}
+
+	.Fase-ColSelect {
+		margin-bottom: 20px;
+	}
+
+	.Footer {
+		position: relative;
+		bottom: initial !important;
+		padding-bottom: 30px;
+	}
+
+	.Footer.Main {
+		display: none;
+	}
+
+	.Footer.Interiores {
+		display: block;
+	}
+
+	.Footer-Center {
+		width: 232px;
+		max-width: 232px;
+		text-align: center;
+	}
+
+	.Footer-Text {
+		position: relative;
+		padding-right: 0;
+		margin: 20px 0px;
+	}
+
+	#ListCompras, #ListComprasDetalle {
+		height: initial !important;
+		overflow-y: initial !important;
+	}
+
+	.Fase-TitleFase3 {
+		font-size: 23px;
+		line-height: 27px;
+	}
+
+	.Fase-TitleFase3 strong {
+		font-size: 35px;
+		line-height: 39px;
+	}
+
+	.ContentModificarDatos-Center {
+    top: 4%;
+	  font-size: 15px;
+	}
+
+	.ContentModificarDatos-Center h4 {
+    font-size: 22px;
+    line-height: 26px;
+	}
+}
+
+@media only screen and (max-width: 560px)
+{
+	.Fase-ContentFase3 {
+		width: 100%;
+		box-sizing: border-box;
+		padding-bottom: 60px !important;
+	}
+	.Fase-ContentLogoOpenP {
+		display: block !important;
+		width: 200px;
+		border: 0px;
+		padding-right: 0px;
+		margin: 0px auto;
+		margin-top: 10px;
+	}
+
+	.Fase-ContentEscudo {
+		display: block !important;
+		margin: 0px auto;
+		margin-top: 10px;
+	}
+
+	.Fase-BtnFase3 {
+		margin-bottom: 25px;
+	}
+}
+
+@media only screen and (max-width: 550px)
+{
+	.Fase-ContentFase2 {
+		width: 407px;
+	}
+
+	#ListCompras {
+		width: 412px !important;
+	}
+
+	.Fase-ListCompras li .Fase-ColListCompras {
+		width: 262px;
+		height: auto;
+	}
+
+	.Fase-TxtPasajero {
+		width: 200px;
+	}
+
+	.Fase-Bancos img {
+    width: 100%;
+	}
+
+	.Fase-ContentFase3 {
+    border: 0px;
+	}
+}
+
+
+@media only screen and (max-width: 520px)
+{
+	.Fase-ContentFase4 {
+		width: 100%;
+	}
+
+	.Fase-TxtDudas {
+		width: 166px;
+		margin-top: 0px;
+		margin-right: 18px;
+	}
+
+	#pdfDescarga {
+	    margin-top: 0px;
+		margin-bottom: 15px;
+	}
+}
+
+@media only screen and (max-width: 470px)
+{
+	.Fase-ContentFase3 {
+		width: 100%;
+	}
+
+	#ListComprasDetalle {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 450px)
+{
+	.Fase-ContentFase2 {
+		width: 307px;
+	}
+
+	#ListCompras {
+		width: 307px !important;
+	}
+
+	.Fase-ListCompras li .Fase-ColListCompras {
+		width: 162px;
+	}
+
+	.Fase-TxtPasajero {
+		width: 160px;
+		margin-bottom: 5px;
+	}
+
+	.Fase-TxtEdad {
+		width: 50px;
+		margin-left: 0px;
+	}
+
+	.Fase-TitleFase3 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.Fase-TitleFase3 strong {
+		font-size: 30px;
+		line-height: 34px;
+	}
+}
+
+@media only screen and (max-width: 430px)
+{
+	.Fase-TxtDudas {
+		width: 100%;
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 400px)
+{
+	h1, h2, h3, h4, h5, h6 {
+		font: 25px 'Raleway-ExtraBold';
+		line-height: 29px;
+	}
+}
+
+@media only screen and (max-width: 390px)
+{
+	.Fase-TitleFase3 strong {
+		font-size: 26px;
+		line-height: 30px;
+	}
+}
+
+@media only screen and (max-width: 380px)
+{
+	.Fase-BtnAnterior {
+		padding: 0px 10px;
+		padding-top: 14px;
+	}
+
+	.Fase-BtnFase3 {
+		padding: 0px 20px;
+		padding-top: 15px;
+	}
+}
+
+@media only screen and (max-width: 370px)
+{
+	.NavMenu {
+    font-size: 11px;
+    line-height: 11px;
+	}
+}
+
+@media only screen and (max-width: 359px)
+{
+	#txtCvc {
+		width: 163px;
+		margin-top: 0px;
+		margin-right: 14px;
+	}
+}
+
+@media only screen and (max-width: 350px)
+{
+	.Fase-ContentFase2 {
+		width: 277px;
+	}
+
+	#ListCompras {
+		width: 277px !important;
+	}
+
+	.Fase-TxtPasajero {
+		width: 100%;
+	}
+
+	.Fase-ListCompras li .Fase-ColListCompras {
+		width: 132px;
+	}
+}
+
+@media only screen and (max-width: 345px)
+{
+	.Fase-TitleFase3 strong {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}
+
+@media only screen and (max-height: 800px)
+{
+	.Fase-Item--1 .Fase-Center {
+		top: 20%;
+	}
+	.Fase-Title {
+		margin-bottom: 18px;
+	}
+
+	#ListCompras {
+	   	width: 512px;
+		height: 300px;
+		overflow-y: auto;
+		margin-left: 0px;
+	}
+
+	#ListComprasDetalle {
+		height: 224px;
+		overflow-y: auto;
+		margin-left: 0px;
+	}
+
+	.Fase-Item--2 .Fase-Center {
+		padding-right: 0px;
+		top: 16.2%;
+	}
+
+	.Fase-Item--3 .Fase-Center {
+		top: 14%;
+	}
+
+	.Fase-BtnFase3 {
+		margin-top: 20px;
+	}
+
+	.Fase-ContentFase3 {
+		padding-top: 15px;
+		padding-bottom: 20px;
+	}
+
+	.Fase-SubtitleFase2 {
+		line-height: 24px;
+	}
+
+	.Fase-Total-Compra {
+		padding-top: 10px;
+	}
+	.Fase-FormCompra {
+		margin-top: 5px;
+	}
+
+	.Fase-ContentFase3 input {
+		margin-bottom: 8px;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+		top: 21%;
+	}
+
+	.Fase-TitleFase3 {
+		margin-bottom: 20px
+	}
+}
+
+@media only screen and (max-height: 700px)
+{
+	.Header {
+		padding-top: 23px;
+		padding-bottom: 18px;
+	}
+
+	.Fase-Item--1 .Fase-Center {
+		top: 15%;
+	}
+
+	.Footer {
+		bottom: 11px;
+	}
+
+	#ListCompras {
+		width: 512px;
+	    height: 168px;
+		overflow-y: auto;
+		margin-left: 0px;
+	}
+
+	#ListComprasDetalle {
+		height: 224px;
+		overflow-y: auto;
+		margin-left: 0px;
+		margin-bottom: 20px;
+	}
+
+	.Fase-Item--2 .Fase-Center {
+		top: 20.2%;
+	}
+
+	.Fase-Item--4 .Fase-Center {
+		top: 18%;
+	}
+
+	.Fase-TitleFase3 {
+		margin-bottom: 20px
+	}
+
+	input {
+		height: 20px;
+		margin-bottom: 15px;
+	}
+
+	textarea {
+		margin-bottom: 15px;
+	}
+
+	.Fase-BtnFase3 {
+		margin-top: 17px;
+	}
+
+	/*
+	
+
+	.Fase-Item--2 .Fase-Center {
+		top: 120px;
+	}
+
+	input, textarea {
+		height: 20px;
+		font-size: 15px;
+	}
+
+	.Fase-BtnFase2 {
+		margin-top: 15px;
+	}*/
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sistema de pagos</title>
+        <link rel="shortcut icon" href="favicon.png" />
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+        <link href="css/fonts.css" rel="stylesheet" type="text/css">        
+        <link href="css/utilidades.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.bxslider.css" rel="stylesheet">
+        <link href="css/fancySelect.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/animations.css" rel="stylesheet" type="text/css">
+        <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML 5 for older browsers -->
+		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+		<!--[if lt IE 9]>
+			<script src="js/html5.js"></script>
+		<![endif]-->
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="js/fancySelect.js"></script>
+        <script type="text/javascript" src="https://js.openpay.mx/openpay.v1.min.js"></script>
+        <script type='text/javascript' src="https://js.openpay.mx/openpay-data.v1.min.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="js/json2.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+    </head>
+
+    <body class="fadeIn u-textCenter">
+        <section class="slider">
+            <div class="Fase-Item Fase-Item--3">
+                <div class="Fase-Center u-inline-block u-textCenter u-box-sizing">
+                    <div class="Fase-ContentFase3 u-inline-block u-textLeft u-imagenFondoCover">
+                        <nav class="NavMenu u-positionAbsolute">
+                            <ul>
+                                <li class="u-inline-block" onclick="$('.ContentModificarDatos').css({'display':'block'}); $('#Terminos').css({'display':'block'}); $('#Aviso').css({'display':'none'});">Terminos y condiciones</li>
+                                <li class="u-inline-block u-sinMargen" onclick="$('.ContentModificarDatos').css({'display':'block'}); $('#Aviso').css({'display':'block'}); $('#Terminos').css({'display':'none'});">Aviso de privacidad</li>
+                            </ul>
+                        </nav>
+                        <div class="datosPago">
+                            <h2 class="Fase-TitleFase2">Hola, <span></span></h2>
+                            <p class="Fase-SubtitleFase2">Comprueba la información y procede al pago.</p>
+
+                            <figure class="Fase-Bancos">
+                                <img src="images/logos.png" alt="Bancos">
+                            </figure>
+
+
+                            <div class="ContentDatosForm">
+
+                                <div class="Fase-Total-Compra u-textRight">
+                                    <p><strong>Total a depositar</strong> <span class="dtTotal">$0.06</span></p>
+                                </div>
+
+                                <form id="CarritoCompras-frmCard" class="Fase-FormCompra u-inline-block u-textLeft" method="POST" action="">
+
+                                    <input class="u-box-sizing" type="hidden" name="txtNombreCompleto" id="txtNombreCompleto" autocomplete="off" placeholder="Nombre" value="" onfocus="if(this.value=='Nombre')this.value='';" data-openpay-card="holder_name">
+                                    <input class="u-box-sizing" type="hidden" name="txtNombre" id="txtNombre" autocomplete="off" placeholder="Nombre" value="" onfocus="if(this.value=='Nombre')this.value='';">
+                                    <input class="u-box-sizing" type="hidden" name="txtApellidos" id="txtApellidos" autocomplete="off" placeholder="Apellidos" value="" onfocus="if(this.value=='Apellidos')this.value='';">
+                                    <input class="u-box-sizing" type="hidden" name="txtTelefono" id="txtTelefono" autocomplete="off" placeholder="Número de Teléfono" value="" onfocus="if(this.value=='Número de Teléfono')this.value='';">
+                                    <input class="u-box-sizing" type="hidden" name="txtEmail" id="txtEmail" autocomplete="off" placeholder="Correo electrónico" value="" onfocus="if(this.value=='Correo electrónico')this.value='';">
+                                    <input class="u-box-sizing" type="text" name="txtTarjeta" id="txtTarjeta" autocomplete="off" placeholder="Número de Tarjeta" data-openpay-card="card_number">
+
+                                    <div class="Fase-DatosVencimiento u-inline-block">
+                                        <p>Vencimiento</p>
+                                        <input class="u-box-sizing u-textCenter" type="text" id="txtMes" autocomplete="off" placeholder="MM" maxlength="2" data-openpay-card="expiration_month"><label for="" class="u-inline-block"> / </label> <input class="u-box-sizing u-textCenter" type="text" id="txtAnio" autocomplete="off" placeholder="AA" maxlength="2" data-openpay-card="expiration_year">
+                                    </div>
+
+                                    <input class="u-box-sizing" type="text" name="txtCvc" id="txtCvc" autocomplete="off" placeholder="Código de Seguridad" data-openpay-card="cvv2" maxlength="4">
+
+                                    <div class="Fase-ContentLogoOpenP u-inline-block">
+                                        Transacciones realizadas vía:
+
+                                        <figure>
+                                            <img src="images/logoOpenpay.png" alt="Logo OpenPay">
+                                        </figure>
+                                    </div>
+
+                                    <div class="Fase-ContentEscudo u-inline-block">
+                                        <figure class="u-inline-block">
+                                            <img src="images/escudo.png" alt="escudo">
+                                        </figure>
+
+                                        <p class="u-inline-block">Tus pagos se realizan de forma segura con encriptación de 256 bits</p>
+                                    </div>
+
+                                    <div class="u-floatRight">
+                                        <a class="Fase-BtnFase3 u-redondeado u-box-sizing u-textCenter">PAGAR</a>	<figure class="Cargado"><img src="images/loading.gif" alt=""></figure>						
+                                    </div>
+                                <!--<a id="btnEnviar" class="Contacto-Btn u-block u-mayuscula u-box-sizing u-textCenter">Enviar Mensaje</a>
+                                <p class="Contacto-Msj u-textCenter"><strong class="u-mayuscula u-inline-block">¡Muchas Gracias!.</strong><br> Su mensaje fue enviado con éxito.</p>-->
+                                </form>
+                            </div>
+
+                            <div class="TextAviso u-textCenter">
+                                <p><strong>El pago ya fue realizado.</strong></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="ContentModificarDatos u-positionAbsolute fadeIn">
+            <div class="ContentModificarDatos-Center u-inline-block u-box-sizing">
+                <span class="ContentModificarDatos-Cerrar u-positionAbsolute" onclick="$('.ContentModificarDatos').css({'display':'none'});">X</span>
+                 <div id="Terminos" class="u-textLeft">
+                    <h4>TERMINOS Y CONDICIONES</h4>
+
+                    <p><strong>Lorem Ipsum</strong></p>
+                    <ul>
+                        <li>is simply dummy text of the printing and typesetting industry</li>
+                        <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+                        <li>when an unknown printer took a galley of type and scrambled it to make</li>
+                        <li>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of</li>
+                    </ul>
+                    <p><strong>There are many variations of passages</strong></p>
+                    <ul>
+                        <li>is simply dummy text of the printing and typesetting industry</li>
+                        <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+                        <li>when an unknown printer took a galley of type and scrambled it to make</li>
+                        <li>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of</li>
+                    </ul>
+
+                    <p><strong>FORMAS DE PAGO</strong></p>
+                    <ul>
+                        <li>Se aceptan pagos con tarjetas bancarias (débito y crédito) respaldadas por Visa, MasterCard y American Express, teniendo como plataforma de pago a Openpay.</li>
+                    </ul>
+                    <p><strong>Lorem Ipsum</strong></p>
+                    <ul>
+                        <li>is simply dummy text of the printing and typesetting industry</li>
+                        <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</li>
+                        <li>when an unknown printer took a galley of type and scrambled it to make</li>
+                        <li>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of</li>
+                    </ul>
+                </div>
+
+                <div id="Aviso" class="u-textLeft" style="display: none;">
+                    <h4>AVISO DE PRIVACIDAD</h4>
+
+                    <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                    <p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset</p>
+
+                    <p><strong>Lorem Ipsum</strong></p>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page</p>
+
+                    <p><strong>INFORMACIÓN QUE RECOPILAMOS DE USTED EN COMPRAS EN LINEA</strong></p>
+
+                    <p><strong>NOTA:</strong> Le informamos que “ no almacena ninguna información de tarjetas de débito, crédito o método de pago como parte del procesamiento de pago. transmitimos la información de las tarjetas de débito, crédito o método de pago directamente con la plataforma Openpay.</p>
+
+                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+
+                    <p><strong>INFORMACIÓN IMPORTANTE</strong></p>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

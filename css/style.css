@@ -1,0 +1,1283 @@
+html, body
+{
+  	height: 100%;
+}
+
+body
+{
+	color: #ffffff;
+	font: 16px 'Raleway-Regular';
+	line-height: 19px;
+	background-size: cover;
+	position: relative;
+}
+
+strong
+{
+  	font-family: 'Raleway-ExtraBold';
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	font: 25px 'Raleway-ExtraBold';
+	line-height: 29px;
+}
+
+a, a:before, a:after
+{
+	color: #ffffff;
+ 	text-decoration: none;
+ 	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+ 	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+a:hover, a:hover:before, a:hover:after
+{	
+	cursor: pointer;
+ 	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+ 	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+span, span:before, span:after
+{
+ 	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+ 	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+span:hover, span:hover:before, span:hover:after
+{	
+	cursor: pointer;
+ 	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+ 	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+input, textarea
+{
+	width: 100%;
+	height: 23px;
+	color: #ffffff;
+	font: 16px 'Raleway-Regular';
+	background: none;
+	border: 0px;
+	border-bottom: 1px solid #ffffff;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 0px;
+	margin-bottom: 20px;
+}
+
+textarea
+{
+    height: 68px;
+	color: #527187;
+    font-family: 'Raleway-Bold';
+    border-bottom: 1px solid #527187;
+	padding-top: 10px;
+	padding-left: 4px;
+	resize: none;
+}
+
+input[type="number"]
+{
+    width: 35px;
+    height: 24px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    border: 2px solid #A6244A;
+}
+
+input[type="radio"], input[type=checkbox] 
+{
+	display: none;
+    width: auto;
+    height: auto;
+} 
+
+input:focus, textarea:focus, .inputSeleccionado
+{
+	outline: 0;
+}
+
+input[type="checkbox"]
+{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	margin-right: 9px;
+	vertical-align: middle;
+}
+
+label {
+	color: #005383;
+	font-family: 'Raleway-Bold';
+	margin-bottom: 6px;
+}
+
+
+label.lbRadio
+{
+	font: 14px 'Raleway-Regular';
+    padding-left: 22px;
+	margin-right: 13px;
+    position: relative;
+}
+
+label.lbRadio:before 
+{
+    display: inline-block;
+    content: "";
+    width: 11px;
+    height: 11px;
+    left: 0;
+    top: 3px;
+    background-color: #ffffff;
+	box-shadow: inset 3px 0px 4px rgba(0, 0, 0, 0.29);
+    vertical-align: top;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+}
+
+label.lbCheckbox
+{
+	font-size: 16px;
+	padding-left: 13px;
+	margin-left: 10px;
+	position: relative;
+}
+
+label.lbCheckbox:before 
+{
+    content: "";
+	display: inline-block;
+	width: 11px;
+    height: 12px;
+	left: 0;
+	top: 4px;
+	background-color: #1d0042;
+	vertical-align: top;
+	position: absolute;
+}
+
+input[type=radio]:checked + label.lbRadio:before 
+{
+	content: "\2022";
+    color: #9fcc44;
+    font-size: 24px;
+    text-align: center;
+    line-height: 12px;
+}
+
+input[type=checkbox]:checked + label.lbCheckbox:before 
+{
+    content: "\2713";
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 12px;
+}
+
+/******************************************************Placeholder******************************************************/
+
+::-webkit-input-placeholder
+{
+ 	color: #ffffff;
+}
+
+::-o-input-placeholder
+{
+ 	color: #ffffff;
+}
+
+::-ms-input-placeholder
+{
+ 	color: #ffffff;
+}
+
+:-moz-input-placeholder
+{
+ 	color: #ffffff;
+}
+
+::-moz-input-placeholder
+{
+ 	color: #ffffff;
+}
+
+
+
+textarea::-webkit-input-placeholder
+{
+ 	color: #527187;
+}
+
+textarea::-o-input-placeholder
+{
+ 	color: #527187;
+}
+
+textarea::-ms-input-placeholder
+{
+ 	color: #527187;
+}
+
+textarea:-moz-input-placeholder
+{
+ 	color: #527187;
+}
+
+textarea::-moz-input-placeholder
+{
+ 	color: #527187;
+}
+
+/************************************************************************************/
+
+.Header {
+	background: #ffffff;
+	padding-top: 33px;
+	padding-bottom: 28px;
+	position: absolute;
+	z-index: 1;
+}
+
+.Header-Center {
+	width: 100%;
+	max-width: 1186px;
+}
+
+.Logo {
+	width: 241px;
+	height: 39px;
+	background: url(../images/logo.png) center no-repeat;
+	background-size: 100%;
+}
+
+.NavMenu {
+	font: 14px 'Raleway-Bold';
+	line-height: 14px;
+	top: -30px;
+	right: 0px;
+}
+
+.NavMenu ul li {
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.NavMenu ul li:hover {
+	color: #162b73;
+}
+
+
+
+.MainMenu-IcoMenu
+{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background: #024673 url("../images/menu.png") no-repeat;
+    margin-top: -4px;
+    margin-right: 0px;
+    background-size: 100%;
+}
+
+.MainMenu-IcoMenu:hover
+{
+	background-color: #779737;
+}
+
+.MainMenu-List {
+	display: inline-block;
+	padding-top: 13px;
+	vertical-align: top;
+}
+
+.MainMenu-Item {
+	color: #005383;
+	font: 16px 'Raleway-Medium';
+	border-bottom: 3px solid #ffffff;
+	margin-right: 40px;
+	padding-bottom: 4px;
+}
+
+.MainMenu-Item:hover, .MainMenu-Item.activo {
+	text-shadow: 1px 0px 0px #005383;
+	border-color: #9aca3a;
+}
+ 
+/**************************************************************************/
+
+.Home {
+	width: 100%;
+    height: 100%;
+    background: url(../images/fondos/bgFase1.jpg) center no-repeat;
+	background-size: cover ;
+}
+
+.Fase-Item {
+	width: 100%;
+    height: 100%;
+    background: center no-repeat;
+	background-size: cover ;
+}
+
+.Fase-Center {
+	width: 100%;
+	max-width: 1186px;
+    /* padding-top: 320px; */
+	top: 30%;
+	position: relative;
+}
+
+.Fase-Item--2 .Fase-Center {
+	padding-right: 90px;
+	top: 20.2%;
+}
+
+
+.Fase-Item--3 .Fase-Center {
+	max-width: 940px;
+	top: 16%;
+}
+
+.Fase-Item--3.Sugerencias .Fase-Center {
+	top: 20%;
+}
+
+.Fase-Title {
+	max-width: 545px;
+	color: #ffffff;
+	font: 27px 'Raleway-Regular';
+	line-height: 31px;
+	margin-bottom: 67px;
+}
+
+.Fase-Title strong {
+	font-family: 'Raleway-SemiBold';
+}
+
+.Fase-Title strong.Hacemos {
+	font-size: 35.23px;
+}
+
+.Fase-Title span {
+	color: #9fcc44;
+	font: 52.37px 'Raleway-ExtraBold';
+}
+
+.Fase-FormFase1 {
+	max-width: 682px;
+}
+
+.Fase-ColSelect {
+	min-height: 61px;
+	border-left: 5px solid #c1e57b;
+	padding-left: 7px;
+	margin-right: 3px;
+	position: relative;
+}
+
+.Fase-ColSelect.Col2 {
+	border-color: #82c7ef;
+}
+
+.Fase-ColSelect.Col3 {
+	border-color: #70cd9f;
+}
+
+.Fase-TextDestino.Temporal {
+	position: relative;
+    top: 10px;
+}
+
+.Fase-Select {
+	width: 210px;
+	min-height: 64px;
+	border: 2px solid #6389a1;
+	padding: 11px 30px 11px 18px ;
+	position: relative;
+}
+
+.Fase-ColSelect.Col3 .Fase-Select { 
+	padding-top: 18px;
+}
+
+.Fase-ColSelect.Col3 .Fase-ContentSelect1 {
+	width: 210px;
+	padding-right: 15px;
+}
+
+.Fase-Select:before {
+	content: "";
+	width: 9px;
+	height: 4px;
+	background: url(../images/bocadillo.png) no-repeat;
+	position: absolute;
+	top: 27px;
+	right: 16px;
+	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+.Fase-Select:hover:before {
+	top: 30px;
+	-webkit-transition: all 300ms ease-out;
+ 	-moz-transition: all 300ms ease-out;
+	-ms-transition: all 300ms ease-out;
+ 	-o-transition: all 300ms ease-out;
+ 	transition: all 300ms ease-out;
+}
+
+.Fase-DatDestino, .Fase-DatAsiento {
+	font-family: 'Raleway-ExtraBold';
+}
+
+.Fase-ColSelect.Col2 .Fase-Select {
+	font-size: 13.04px;
+	padding: 5px 30px 5px 10px ;
+}
+
+.Fase-ViajeIda {
+	width: 74px;
+	width: 84px;
+	line-height: 16px;
+	border-right: 1px solid #317195;
+}
+
+.Fase-ViajeIda.Temporal {
+	width: 74px;
+    position: relative;
+    top: 16px;
+}
+
+.Fase-ViajeVuelta {
+	width: 76px;
+	width: 78px;
+	line-height: 16px;
+	padding-left: 10px;
+	padding-left: 0px;
+}
+
+.Fase-ViajeVuelta.Temporal {
+	width: 76px;
+	padding-left: 10px;
+    width: 73px;
+    padding-left: 4px;
+	position: relative;
+    top: 16px;
+}
+
+.Fase-BtnFase1 {
+	width: 207px;
+	height: 52px;
+	color: #ffffff;
+	background: url(../images/btnFase1.png) no-repeat;
+	margin-top: 27px;
+	padding-top: 18px;
+	box-shadow: 8px 0px 16px rgba(0,0,0,0.08);
+	position: relative;
+}
+
+.Fase-BtnFase1:hover {
+	/*background: #51cd4d;*/
+	transform: translateY(-5px);
+}
+
+.Fase-BtnFase1 div {
+	display: none;
+	width: 141px;
+    color: #fff;
+    font-size: 14px;
+	line-height: 19px;
+    background: #427397;
+    padding: 15px;
+    left: 19px;
+    bottom: 84px;
+    z-index: 11;
+}
+
+
+
+.Fase-BtnFase1 ul {
+	 font-family: 'Raleway-Regular';
+	 margin-left: 5px;
+}
+
+.Fase-BtnFase1 ul li {
+	margin-top: 4px;
+}
+
+.Fase-ContentSelect1 {
+	display: none;
+	width: 179px;
+	font-size: 14px;
+	background: #f7f7f7;
+	padding: 10px 20px 14px 17px;
+	z-index: 8;
+}
+
+.Fase-ContentBan {
+	display: none;
+	width: 210px;
+    height: 171.44px;
+    background: url(../images/imgBan.jpg) no-repeat;
+    background-size: 100%;
+    margin-top: -12px;
+    padding-top: 44px;
+    padding-left: 19px;
+    z-index: 8;
+	left: 0px;
+}
+
+.Fase-ColBan {
+	width: 112px;
+}
+
+.Fase-ColBan2 {
+	width: 23px;
+	padding-top: 46px;
+}
+
+.Fase-ItemAsiento {
+    width: 23px;
+    font: 10px 'gotham_boldregular';
+    line-height: 10px;
+    padding: 3px 0px;
+    padding-top: 5px;
+    margin-bottom: 2px;
+    border: 1px solid #ffffff;
+    text-align: center;
+	border-radius: 0.2em;
+}
+
+.Fase-ItemAsiento.Ocupado {
+	color: rgba(255,255,255,0.09);
+}
+
+.Fase-ItemAsiento:hover, .Fase-ItemAsiento.activo {
+	background: #9fcc44;
+}
+.Fase-ItemAsiento.Ocupado:hover {
+	background: none;
+	color: rgba(255,255,255,0.09);
+}
+
+.Fase-ContentSelect3 {
+	display: none;
+	width: 160px;
+	height: 100px;
+	background: #437397;
+	box-shadow: 8px 0px 9px rgba(0, 0, 0, 0.10);
+	padding-top: 11px;
+	margin-top: -12px;
+    left: 17px;
+	z-index: 8;
+	overflow: auto;
+}
+
+.Fase-ContentSelect3 li {
+	color: #ffffff;
+	padding: 4px 0px;
+	padding-left: 10px;
+    font-size: 14px;
+	line-height: 16px;
+	margin-bottom: 3px;
+	box-sizing: border-box;
+}
+
+
+.Fase-ContentSelect3 li.Ocupado {
+	background: #838383;
+}
+
+.Fase-ContentSelect3 li:hover, .Fase-ContentSelect3 li.activo {
+	cursor: pointer;
+	background: #9fcc44;
+}
+
+
+.Fase-ContentSelect3 li.Ocupado:hover {
+	background: #838383;
+}
+
+.Fase-SelectAsientos {
+	color: #005383;
+    font: 14px 'Raleway-Regular';
+	line-height: 19px;
+	background: url(../images/date_icon.png) #ffffff no-repeat 137px 12px;
+    padding: 8px 0px;
+    padding-left: 9px;
+    border: 0px;
+    box-shadow: 0px 5px 9px rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+	margin-bottom: 15px;
+	position: relative;
+}
+
+.Fase-DatAsientos {
+	font: 14px 'Raleway-ExtraBold';
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+
+.Fase-ContentFase2 {
+	width: 507px;
+}
+
+.Fase-ContentFase3 {
+	width: 434px;
+	color: #1f4560;
+	background: url(../images/fondos/bgFormulario.png) center no-repeat;
+	border: 3px solid rgba(0,0,0,0.3);
+	padding-top: 50px;
+	padding-top: 50px;
+	padding-top: 25px;
+	padding-left: 33px;
+	padding-right: 43px;
+	padding-bottom: 25px;
+	position: relative;
+}
+
+.Fase-ContentFase3 input {
+	color: #527187;
+	font-family: 'Raleway-Bold';
+	border-bottom: 1px solid #527187;
+	margin-bottom: 13px;
+}
+
+.Fase-ContentFase3 input::-webkit-input-placeholder
+{
+ 	color: #527187;
+}
+
+.Fase-ContentFase3 input::-o-input-placeholder
+{
+ 	color: #527187;
+}
+
+.Fase-ContentFase3 input::-ms-input-placeholder
+{
+ 	color: #527187;
+}
+
+.Fase-ContentFase3 input:-moz-input-placeholder
+{
+ 	color: #527187;
+}
+
+.Fase-ContentFase3 input::-moz-input-placeholder
+{
+ 	color: #527187;
+}
+
+.Fase-Bancos img {
+    margin-top: 10px;
+}
+
+.Fase-ContentLogoOpenP {
+	width: 192px;
+	color: #527187;
+    font-size: 11.27px;
+    border-right: 1px solid #6b7e88;
+    padding-right: 20px;
+}
+
+.Fase-ContentLogoOpenP figure {
+	
+}
+
+.Fase-ContentEscudo {
+	width: 200px;
+    color: #527187;
+    font-family: 'Raleway-Bold';
+    font-size: 11.27px;
+    line-height: 14px;
+    letter-spacing: -0.8px;
+	margin-top: 15px;
+    margin-left: 15px;
+}
+
+.Fase-ContentEscudo figure {
+	
+}
+
+
+.Fase-ContentEscudo p {
+	width: 147px;
+    margin-left: 10px;
+}
+
+
+.Fase-ListCompras {
+	width: 492px;
+	/*height: 271px;*/
+	font-size: 14.45px;
+	line-height: 23.48px;
+	margin-top: 20px;
+	padding: 0px 15px 19px 0px;
+	margin-left: 17px;
+}
+
+#ListCompras{
+	width: 500px;
+	height: 340px;
+	overflow-y: auto;
+}
+
+.Fase-ListCompras::-webkit-scrollbar {
+    /*-webkit-appearance: none;*/
+}
+
+.Fase-ListCompras::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.Fase-ListCompras::-webkit-scrollbar-track{
+    
+    /*background-color: #F5F5F5;*/
+}
+
+.Fase-ListCompras::-webkit-scrollbar-thumb{
+	width: 16px;
+    background-color: #399e79; 
+	-webkit-box-shadow: 0px 8px 8px rgba(0,0,0,0.22);
+	border-radius: 0.2em;
+    /*background-image: -webkit-linear-gradient(90deg,rgba(255, 255, 255, .2) 25%,transparent 25%,transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,transparent 75%,transparent)*/
+}
+
+.Fase-ListCompras li { 
+	border-bottom: 2px solid #3bcb95;
+	padding-top: 17px;
+	padding-bottom: 11px;
+	position: relative;
+}
+
+.Fase-PrecioBoleto {
+    top: 10px;
+	right: 20px;
+}
+
+.Fase-ListCompras li.SinBorder { 
+	border: 0px;
+}
+
+.Fase-ListCompras li .Fase-ColListCompras { 
+	width: 362px;
+	height: 142px;
+}
+
+.Fase-ListCompras li .Fase-OpcionesListCompras {
+	width: 100px;
+    margin-left: 11px;
+}
+
+.Fase-TextTipoBoleto {
+    margin-top: 13px;	
+}
+
+.Fase-ListCompras div.fancy-select {
+    width: 145px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: 5px;	
+}
+
+.Fase-ListCompras div.fancy-select div.trigger {
+    height: 22px;
+    line-height: 7px;
+    margin-top: 5px;
+}
+
+.Fase-ListCompras div.fancy-select ul.options 
+{
+	display: none;
+}
+
+.Fase-ListCompras div.fancy-select ul.options.open {
+	display: block;
+}
+
+.Fase-BtnEliminarCompra {
+	display: block;
+    width: 15px;
+    height: 18px;
+    background: url(../images/icoEliminar.png) no-repeat;
+    margin: 0px auto;
+	margin-top: 38px;
+    margin-bottom: 26px;
+}
+
+.Fase-BtnEliminarCompra:hover {
+    transform: translateY(-5px);
+}
+
+.Fase-ListCompras.DetalleCompra {
+    width: 421px;
+	height: 220px;
+    border: 2px solid #5baddc;
+    margin-bottom: 38px;
+    padding-left: 16px;
+    margin-left: 0px;
+	overflow-y: auto;
+}
+
+.Fase-ListCompras.DetalleCompra li {
+	border-color: #5ba8d4;
+}
+
+.Fase-Total-Compra {
+	padding-top: 25px;
+	padding-bottom: 15px;
+}
+
+.Fase-SubtitleFase2 {
+	font: 16px 'Raleway-SemiBold';
+  line-height: 28px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.Fase-DestinoComra {
+	font-size: 16.25px;
+	line-height: 23.48px;
+}
+
+.Fase-BtnEditarCompra {
+	font-size: 13.54px;
+	margin-right: 0px;
+}
+
+.Fase-BtnEditarCompra:hover, .Fase-BtnEliminarCompra:hover {
+	color: #baff31;
+}
+
+.Fase-FormCompra {
+	margin-top: 8px;
+}
+
+.Fase-DatosVencimiento label {
+	color: #ffffff;
+	color: #527187;
+}
+
+#txtMes {
+	width: 30px;
+    margin-right: 5px;
+}
+
+#txtAnio {
+	width: 60px;
+    margin-right: 25px;
+}
+
+#txtVencimiento {
+	width: 125px;
+	margin-right: 25px;
+}
+
+#txtCvc {
+	width: 163px;
+	margin-top: 21px;
+}
+
+.Fase-DatosPasajero {
+	margin-top: 5px;
+    margin-bottom: -10px;
+}
+
+.Fase-TxtPasajero {
+    width: 232px;
+}
+
+.Fase-TxtEdad {
+	width: 40px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.Cargado {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Cargado img {
+	display: none;
+	width: 40px;
+    margin-top: 30px;
+    margin-left: 8px;
+}
+
+.Fase-BtnFase2 {
+	height: 52px;
+	color: #02693f;
+	font: 16px 'Raleway-SemiBold';
+	line-height: 18px;
+	background: #4ffbba;
+	margin-top: 27px;
+	padding: 0px 15px;
+    padding-top: 18px;
+}
+
+.Fase-BtnFase2:hover {
+	transform: translateY(-5px);
+}
+
+.Fase-BtnFase3 {
+	display: inline-block;
+	height: 42px;
+	color: #ffffff;
+  font: 16px 'Raleway-SemiBold';
+  line-height: 18px;
+  background: #172a73;
+	margin-top: 18px;
+	padding: 0px 35px;
+  padding-top: 15px;
+	vertical-align: top;
+}
+
+.Fase-BtnFase3:hover {
+	transform: translateY(-5px);
+}
+
+.Fase-BtnQuejas {
+	display: inline-block;
+	height: 42px;
+	color: #02693f;
+	font: 16px 'Raleway-SemiBold';
+	line-height: 18px;
+	background: #4ffbba;
+	margin-top: 18px;
+	padding: 0px 35px;
+    padding-top: 15px;
+	vertical-align: top;
+}
+
+.Fase-BtnQuejas:hover {
+	transform: translateY(-5px);
+}
+
+
+.Fase-BtnAnterior {
+	display: inline-block;
+	height: 42px;
+	color: #02693f;
+	font: 16px 'Raleway-SemiBold';
+	line-height: 18px;
+	background: #4ffbba;
+	margin-top: 18px;
+	padding: 0px 20px;
+    padding-top: 14px;
+	vertical-align: top;
+}
+
+.Fase-BtnAnterior:hover {
+	transform: translateY(-5px);
+}
+
+
+.Fase-BtnFaseEdi {
+	height: 40px;
+    color: #02693f;
+    font: 16px 'Raleway-SemiBold';
+    line-height: 18px;
+    background: #4ffbba;
+    margin-top: 10px;
+    padding: 0px 15px;
+    padding-top: 13px;
+}
+
+.Fase-BtnFaseEdi:hover {
+	transform: translateY(-5px);
+}
+
+.Fase-ContentFase4 {
+	width: 475px;
+	padding-top: 180px;
+}
+
+.Fase-TitleFase3 {
+	color: #ffffff;
+	font: 28px 'Raleway-Regular';
+	line-height: 32px;
+	margin-bottom: 40px;
+}
+
+.Fase-TitleFase3 strong {
+	color: #172a73;
+	font: 40px 'Raleway-ExtraBold';
+	line-height: 44px;
+}
+
+.Fase-TitleFase3 span {
+	font-family: 'Raleway-ExtraBold';
+}
+
+.Fase-TxtDudas {
+	width: 258px;
+	line-height: 22px;
+	margin-top: 6px;
+	margin-right: 20px;
+}
+
+.Fase-ListDatosContacto {
+	width: 184px;
+}
+
+.Fase-ListDatosContacto li {
+	margin-bottom: 11px;
+}
+
+.Fase-ListDatosContacto span {
+	background-size: 100%;
+	margin-top: 3px;
+}
+
+.Fase-IcoEmail {
+	width: 17px;
+	height: 11px;
+	background: url(../images/icoEmail.png) no-repeat;
+	margin-right: 14px;
+}
+
+.Fase-IcoTelefono {
+	width: 18px;
+	height: 18px;
+	background: url(../images/icoTel.png) no-repeat;
+	margin-right: 13px;
+}
+
+.Fase-ListDatosContacto a:hover {
+	color: #9fcc44;
+}
+
+
+
+/**************************************************************************/
+
+.Footer {
+	position: absolute;
+	bottom: 53px;
+}
+
+.Footer.Interiores {
+	display: none;
+}
+
+.Footer-Center {
+	width: 100%;
+	max-width: 1186px;
+	padding-right: 54px;
+	position: relative;
+}
+
+.Footer-Center figure img {
+	width: 169px;
+}
+
+.Footer-Text {
+	color: #ffffff;
+    font: 14px 'Raleway-SemiBold';
+	line-height: 16px;
+    top: 6px;
+    left: 0;
+    right: 0px;
+    margin: 0px auto;
+    padding-right: 54px;
+}
+
+.Footer-RedSocial {
+	width: 31px;
+	height: 31px;
+	background: url(../images/icoFacebook.png) no-repeat;
+	background-size: 100%;
+	margin-right: 18px;
+}
+
+.Footer-RedSocial--Instagram {
+	background-image: url(../images/icoInstagram.png);
+}
+
+.Footer-RedSocial--Youtube {
+	background-image: url(../images/icoYoutube.png);
+}
+
+.Footer-RedSocial--Tiktok {
+	background-image: url(../images/icoTiktok.png);
+}
+
+.Footer-RedSocial:hover {
+	transform: translateY(-5px);
+}
+
+/************************************************/
+
+.ContentModificarDatos {
+		display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2;
+    box-sizing: border-box;
+		padding: 0px 20px;
+		position: fixed;
+		overflow-y: auto;
+}
+
+.ContentModificarDatos-Cerrar {
+  font: 25px 'Raleway-ExtraBold';
+	line-height: 25px;
+	top: 2px;
+  right: 5px;
+}
+.ContentModificarDatos-Cerrar:hover {
+	color: #172a73;
+}
+
+.ContentModificarDatos-Center {
+	max-width: 700px;
+	color: #000;
+	background: #ffffff;
+	padding: 20px;
+	position: relative;
+	top: 10%;
+}
+
+.ContentModificarDatos-Center h4 {
+	margin-bottom: 10px;
+}
+
+.ContentModificarDatos-Center ul {
+	list-style-type: disc;
+	margin-bottom: 10px;
+	margin-left: 16px;
+}
+
+.ContentModificarDatos-Center p {
+	margin-bottom: 10px;
+}
+
+#Fase-ListAsientosEditar {
+	display: block;
+	margin: 0px auto;
+    margin-top: -6px;
+	position: relative;
+    text-align: left;
+}
+
+#Fase-ListAsientosEditar .Fase-ColBan {
+    width: 115px;
+}
+
+.ContentModificarDatos-Center .datepicker, .ContentModificarDatos-Center .datepicker2 {
+    background: url(../images/date_icon.png) #ffffff no-repeat 187px center;
+	padding-left: 14px;
+}
+
+.ContentModificarDatos-Center div.fancy-select div.trigger {
+    margin-bottom: 8px;
+}
+
+#pdfDescarga {
+    display: inline-block;
+    color: #02693f;
+    font: 16px 'Raleway-SemiBold';
+    line-height: 18px;
+    background: #4ffbba;
+    margin-bottom: 10px;
+    padding: 8px 15px;
+}
+
+#pdfDescarga:hover {
+	transform: translateY(-5px);
+}
+
+select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+select{
+	display: inline-block;
+    width: 145px;
+    cursor: pointer;
+    padding-left: 14px;
+    margin-top: 14px;
+    margin-left: 4px;
+    height: 22px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+	background: #fff url(../images/icoSelect.png) 122px center no-repeat;
+    color: #7b7b7b;
+    font-size: 1em;
+	color: #005383;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid rgba(0,0,0,0.2);
+    /* border-radius: 12px; */
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+select option {
+	color: #ffffff;
+	background: #427397;
+	padding: 5px 0px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+option:checked { 
+    background: #9fcc44 !important;
+}
+
+.Seletlista {
+	height: 31px;
+    font: 14px 'Raleway-Regular';
+    line-height: 16px;
+    color: #005383;
+    margin-top: 0px;
+    padding-left: 14px;
+    margin-left: 0px;
+	margin-bottom: 6px;
+}
+
+.AsientoSelecciones {
+	width: 100%;
+    height: 14px;
+    font: 13px 'Raleway-ExtraBold';
+    line-height: 15px;
+    overflow: hidden;
+}
+
+.TextAviso {
+	display: none;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
