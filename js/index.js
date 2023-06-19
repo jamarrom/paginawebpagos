@@ -22,7 +22,7 @@ let order_pago_id = 0;
 			dataType: "json",
 			//url: "ajax/procesarOrdenCardOpen.php",
 			//url: "ajax/procesarOrdenCardOpenSegurite.php",
-			url: "http://3.212.162.49/procesarOrdenOpenpay",
+			url: "http://107.20.146.131/procesarOrdenOpenpay",
 			success	: function(Respuesta)
 			{
 				window.rspt = Respuesta['texto'];
@@ -69,7 +69,7 @@ let order_pago_id = 0;
 
 		$.ajax(
 			{
-				url: "http://3.212.162.49/consultarOrdenPago",
+				url: "http://107.20.146.131/consultarOrdenPago",
 				data	:{
 					ordenPago:prodId
 				},

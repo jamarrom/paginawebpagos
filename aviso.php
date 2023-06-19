@@ -33,7 +33,7 @@
                     data	: {	customer_id:localStorage.getItem('customer_id'),transccion_id: '<?php echo $_GET['id']?>'},
                     type	: "post",
                     dataType: "json",
-                    url: "http://3.212.162.49/validarPago",
+                    url: "http://107.20.146.131/validarPago",
                     success	: function(Respuesta)
                     {
                         if(Respuesta['status']=="completed")
@@ -42,7 +42,7 @@
                                 data	: {	order_pago_id:localStorage.getItem('order_pago_id'),customer_id:localStorage.getItem('customer_id'),order_id:localStorage.getItem('order_id'),token:localStorage.getItem('token')},
                                 type	: "post",
                                 dataType: "json",
-                                url: "http://3.212.162.49/actualizarStatus",
+                                url: "http://107.20.146.131/actualizarStatus",
                                 success	: function(Respuesta)
                                 {
                                 },
