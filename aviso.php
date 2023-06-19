@@ -3,7 +3,7 @@
     <head> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
         <title>Pago exitoso</title>
         <link rel="shortcut icon" href="favicon.png" />
         <link href="css/reset.css" rel="stylesheet" type="text/css">
