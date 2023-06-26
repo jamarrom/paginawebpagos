@@ -5,24 +5,85 @@ let order_pago_id = 0;
     OpenPay.setApiKey('pk_e2fdf28eda15493da35ce7f21ec8f488');
 	OpenPay.setSandboxMode(true);*/
 
-	OpenPay.setId('mc2lujsx0twl7jcqwbdr');
-  OpenPay.setApiKey('pk_25c9b9c4a7eb4136baced593fc0ae8cc');
-	OpenPay.setSandboxMode(true);
-  var deviceSessionId = OpenPay.deviceData.setup("CarritoCompras-frmCard", "deviceIdHiddenFieldName");
+	// OpenPay.setId('mc2lujsx0twl7jcqwbdr');
+  // OpenPay.setApiKey('pk_25c9b9c4a7eb4136baced593fc0ae8cc');
+	// OpenPay.setSandboxMode(true);
 
-	function onSuccess(response) {
-		console.log(response);
-		console.log(response.data.id);
-		console.log(deviceSessionId);
+	Conekta.setPublicKey('key_MtjaPWHsnoSMwJrLrllOIj5');
+
+  // var deviceSessionId = OpenPay.deviceData.setup("CarritoCompras-frmCard", "deviceIdHiddenFieldName");
+
+	// function onSuccess(response) {
+	// 	console.log(response);
+	// 	console.log(response.data.id);
+	// 	console.log(deviceSessionId);
+	// 	const textCompra = "Pago de "+$("#txtNombreCompleto").val()+" por el monto de $"+totalCompraGen;
+
+	// 	$.ajax({
+	// 		data	: {	txtNombre:$("#txtNombre").val(),txtApellidos:$("#txtApellidos").val(),txtTelefono:$("#txtTelefono").val(),txtEmail:$("#txtEmail").val(),totalCompra:totalCompraGen,listaComprar:textCompra,source_id:response.data.id,device_session_id : deviceSessionId },
+	// 		type	: "post",
+	// 		dataType: "json",
+	// 		//url: "ajax/procesarOrdenCardOpen.php",
+	// 		//url: "ajax/procesarOrdenCardOpenSegurite.php",
+	// 		url: "http://localhost:3001/procesarOrdenOpenpay",
+	// 		success	: function(Respuesta)
+	// 		{
+	// 			window.rspt = Respuesta['texto'];
+	// 			console.log(Respuesta);
+
+	// 			$(".Cargado img").slideUp('slow');
+
+	// 			if(Respuesta['texto']=="Exito"||Respuesta['texto']==">Exito")
+	// 			{
+	// 				localStorage.setItem('order_pago_id',order_pago_id);
+	// 				localStorage.setItem('token',response.data.id);
+	// 				localStorage.setItem('customer_id',Respuesta['customer_id']);
+	// 				localStorage.setItem('order_id',Respuesta['orde_id']);
+
+	// 				window.location.href = Respuesta['url'];
+	// 			}
+	// 			else
+	// 			{
+	// 			  $(".Cargado img").slideUp('slow');
+	// 				console.log(Respuesta);
+	// 				swal("Sistema de compras", "Lo sentimos su cpago no pudo ser realizada, intente más tarde por favor.", "warning");										
+	// 			}
+	// 		},
+	// 		error: function(XMLHttpRequest, textStatus, errorThrown) {
+	// 		    $(".Cargado img").slideUp('slow');
+	// 		    swal("Sistema de compras", "", "warning");
+	// 		}
+
+	// 	}).fail( function( jqXHR, textStatus, errorThrown ) {
+	// 	    $(".Cargado img").slideUp('slow');
+  //           swal("Sistema de compras", "Lo sentimos su compra no pudo ser realizada, transcasión declinada, intente más tarde por favor.", "warning");
+  //       });
+	// }
+
+	// function onError(response) {
+	// 	console.log(response);
+	// 	$(".Cargado img").slideUp('slow');
+	// 	swal("Carrito de compras", "Lo sentimos su pago no pudo ser realizado, transcasión declinada, intente más tarde por favor.", "warning");
+	// }
+
+
+
+
+
+
+	var conektaSuccessResponseHandler = function(token) {
+		var $form = $("#CarritoCompras-frmCard");
+		$form.append($('<input type="hidden" name="conektaTokenId" id="conektaTokenId">').val(token.id));
+
 		const textCompra = "Pago de "+$("#txtNombreCompleto").val()+" por el monto de $"+totalCompraGen;
 
 		$.ajax({
-			data	: {	txtNombre:$("#txtNombre").val(),txtApellidos:$("#txtApellidos").val(),txtTelefono:$("#txtTelefono").val(),txtEmail:$("#txtEmail").val(),totalCompra:totalCompraGen,listaComprar:textCompra,source_id:response.data.id,device_session_id : deviceSessionId },
+			data	: {	txtNombre:$("#txtNombre").val(),txtApellidos:$("#txtApellidos").val(),txtTelefono:$("#txtTelefono").val(),txtEmail:$("#txtEmail").val(),totalCompra:totalCompraGen,listaComprar:textCompra,txtKo:token.id },
 			type	: "post",
 			dataType: "json",
 			//url: "ajax/procesarOrdenCardOpen.php",
 			//url: "ajax/procesarOrdenCardOpenSegurite.php",
-			url: "http://107.20.146.131/procesarOrdenOpenpay",
+			url: "http://localhost:3001/procesarOrdenOpenpay",
 			success	: function(Respuesta)
 			{
 				window.rspt = Respuesta['texto'];
@@ -33,17 +94,17 @@ let order_pago_id = 0;
 				if(Respuesta['texto']=="Exito"||Respuesta['texto']==">Exito")
 				{
 					localStorage.setItem('order_pago_id',order_pago_id);
-					localStorage.setItem('token',response.data.id);
+					localStorage.setItem('token',Respuesta['openpay_id']);
 					localStorage.setItem('customer_id',Respuesta['customer_id']);
 					localStorage.setItem('order_id',Respuesta['orde_id']);
 
-					window.location.href = Respuesta['url'];
+					window.location.href = "aviso";
 				}
 				else
 				{
 				  $(".Cargado img").slideUp('slow');
 					console.log(Respuesta);
-					swal("Sistema de compras", "Lo sentimos su cpago no pudo ser realizada, intente más tarde por favor.", "warning");										
+					swal("Sistema de compras", "Lo sentimos su pago no pudo ser realizadO, intente más tarde por favor.", "warning");										
 				}
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
@@ -53,15 +114,21 @@ let order_pago_id = 0;
 
 		}).fail( function( jqXHR, textStatus, errorThrown ) {
 		    $(".Cargado img").slideUp('slow');
-            swal("Sistema de compras", "Lo sentimos su compra no pudo ser realizada, transcasión declinada, intente más tarde por favor.", "warning");
+            swal("Sistema de compras", "Lo sentimos su pago no pudo ser realizado, transcasión declinada, intente más tarde por favor.", "warning");
         });
-	}
+	};
 
-	function onError(response) {
+	var conektaErrorResponseHandler = function(response) {
 		console.log(response);
 		$(".Cargado img").slideUp('slow');
 		swal("Carrito de compras", "Lo sentimos su pago no pudo ser realizado, transcasión declinada, intente más tarde por favor.", "warning");
-	}
+
+	};
+
+
+
+
+
 
 	$(document).ready(function()
   {
@@ -69,7 +136,7 @@ let order_pago_id = 0;
 
 		$.ajax(
 			{
-				url: "http://107.20.146.131/consultarOrdenPago",
+				url: "http://localhost:3001/consultarOrdenPago",
 				data	:{
 					ordenPago:prodId
 				},
@@ -123,15 +190,9 @@ let order_pago_id = 0;
 												{
 													$(".Cargado img").slideDown('slow');
 
-													OpenPay.token.create({
-														"card_number":$("#txtTarjeta").val(),
-														"holder_name":$("#txtNombreCompleto").val(),
-														"expiration_year":$("#txtAnio").val(),
-														"expiration_month":$("#txtMes").val(),
-														"cvv2":$("#txtCvc").val()
-													}, onSuccess, onError);
+													let $form = $("#CarritoCompras-frmCard");
+													Conekta.Token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
 												}
-
 					}
 					else {
 						$("#txtEmail").effect('pulsate', { times:2 }, 1000);
@@ -150,7 +211,7 @@ let order_pago_id = 0;
 
 	function validar_campo(campo,cant_num, place)
  	{
-  		var ban = true;
+  		let ban = true;
 
     	if(/^\s+$/.test($(campo).val()) || $(campo).val().length < cant_num ||  $(campo).val() == place)
 			ban = false;
@@ -188,64 +249,64 @@ let order_pago_id = 0;
 		return (fecha.substr(-4,4)+"-"+fecha.substr(3,2)+"-"+fecha.substr(0,2));
 	}
 
-
 	function validarTarjeta(campo)
  	{
-  		var ban = true;
+  		let ban = true;
 
-		if(!OpenPay.card.validateCardNumber($(campo).val()))
-	  	{
-			$(campo).effect('pulsate', { times:2 }, 1000);
-			$(campo).focus();
-			ban = false;
-		}
+			if(!Conekta.card.validateNumber($(campo).val()))
+				{
+				$(campo).effect('pulsate', { times:2 }, 1000);
+				$(campo).focus();
+				ban = false;
+			}
   		return ban;
 	}
 
+
 	function validarCVC(campo)
  	{
-  		var ban = true;
+  		let ban = true;
 
-		if(!OpenPay.card.validateCVC($(campo).val()))
-		{
-			$(campo).effect('pulsate', { times:2 }, 1000);
-			$(campo).focus();
-			ban = false;
+			if(!Conekta.card.validateCVC($(campo).val()))
+			{
+				$(campo).effect('pulsate', { times:2 }, 1000);
+				$(campo).focus();
+				ban = false;
 	  	}
   	return ban;
 	}
 
 	function validarFechaVigencia(campo,campo2)
  	{
-  		var ban = true;
+  	let ban = true;
 
-		if(!OpenPay.card.validateExpiry($(campo).val(), $(campo2).val()))
-	  	{
+		if(!Conekta.card.validateExpirationDate($(campo).val(), $(campo2).val()))
+	  {
 			$(campo).effect('pulsate', { times:2 }, 1000);
 			$(campo).focus();
 			$(campo2).effect('pulsate', { times:2 }, 1000);
 			$(campo2).focus();
 			ban = false;
-	  	}
+	  }
   	return ban;
 	}
 
 	function borrarCookieCarrito(){
 		document.cookie.split(";").forEach(function(c) {
-		document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+			document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
 		});
 	}
 
 	function validar_campoC(campo,cant_num, place)
  	{
-  		var ban = true;
+  		let ban = true;
 
      	if(/^\s+$/.test($(campo).val()) || $(campo).val().length < cant_num ||  $(campo).val() == place)
 	  	{
-			$(campo).effect('pulsate', { times:2 }, 1000);
-			$(campo).focus();
-			ban = false;
-		}
+				$(campo).effect('pulsate', { times:2 }, 1000);
+				$(campo).focus();
+				ban = false;
+			}
   	return ban;
 	}
 

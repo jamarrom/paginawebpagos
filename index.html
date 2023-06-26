@@ -26,6 +26,7 @@
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
         <script type="text/javascript" src="js/fancySelect.js"></script>
+        <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
         <script type="text/javascript" src="https://js.openpay.mx/openpay.v1.min.js"></script>
         <script type='text/javascript' src="https://js.openpay.mx/openpay-data.v1.min.js"></script>
         <script type="text/javascript" src="js/sweetalert.min.js"></script>
@@ -49,7 +50,7 @@
                             <h2 class="Fase-TitleFase2">Hola, <span></span></h2>
                             <p class="Fase-SubtitleFase2">Comprueba la información y procede al pago.</p>
 
-                            <figure class="Fase-Bancos">
+                            <figure class="Fase-Bancos u-textCenter">
                                 <img src="images/logos.png" alt="Bancos">
                             </figure>
 
@@ -62,25 +63,25 @@
 
                                 <form id="CarritoCompras-frmCard" class="Fase-FormCompra u-inline-block u-textLeft" method="POST" action="">
 
-                                    <input class="u-box-sizing" type="hidden" name="txtNombreCompleto" id="txtNombreCompleto" autocomplete="off" placeholder="Nombre" value="" onfocus="if(this.value=='Nombre')this.value='';" data-openpay-card="holder_name">
+                                    <input class="u-box-sizing" type="hidden" name="txtNombreCompleto" id="txtNombreCompleto" autocomplete="off" placeholder="Nombre" value="" onfocus="if(this.value=='Nombre')this.value='';" data-conekta="card[name]">
                                     <input class="u-box-sizing" type="hidden" name="txtNombre" id="txtNombre" autocomplete="off" placeholder="Nombre" value="" onfocus="if(this.value=='Nombre')this.value='';">
                                     <input class="u-box-sizing" type="hidden" name="txtApellidos" id="txtApellidos" autocomplete="off" placeholder="Apellidos" value="" onfocus="if(this.value=='Apellidos')this.value='';">
                                     <input class="u-box-sizing" type="hidden" name="txtTelefono" id="txtTelefono" autocomplete="off" placeholder="Número de Teléfono" value="" onfocus="if(this.value=='Número de Teléfono')this.value='';">
                                     <input class="u-box-sizing" type="hidden" name="txtEmail" id="txtEmail" autocomplete="off" placeholder="Correo electrónico" value="" onfocus="if(this.value=='Correo electrónico')this.value='';">
-                                    <input class="u-box-sizing" type="text" name="txtTarjeta" id="txtTarjeta" autocomplete="off" placeholder="Número de Tarjeta" data-openpay-card="card_number">
+                                    <input class="u-box-sizing" type="text" name="txtTarjeta" id="txtTarjeta" autocomplete="off" placeholder="Número de Tarjeta" data-conekta="card[number]">
 
                                     <div class="Fase-DatosVencimiento u-inline-block">
                                         <p>Vencimiento</p>
-                                        <input class="u-box-sizing u-textCenter" type="text" id="txtMes" autocomplete="off" placeholder="MM" maxlength="2" data-openpay-card="expiration_month"><label for="" class="u-inline-block"> / </label> <input class="u-box-sizing u-textCenter" type="text" id="txtAnio" autocomplete="off" placeholder="AA" maxlength="2" data-openpay-card="expiration_year">
+                                        <input class="u-box-sizing u-textCenter" type="text" id="txtMes" autocomplete="off" placeholder="MM" maxlength="2" data-conekta="card[exp_month]"><label for="" class="u-inline-block"> / </label> <input class="u-box-sizing u-textCenter" type="text" id="txtAnio" autocomplete="off" placeholder="AA" maxlength="2" data-conekta="card[exp_year]">
                                     </div>
 
-                                    <input class="u-box-sizing" type="text" name="txtCvc" id="txtCvc" autocomplete="off" placeholder="Código de Seguridad" data-openpay-card="cvv2" maxlength="4">
+                                    <input class="u-box-sizing" type="text" name="txtCvc" id="txtCvc" autocomplete="off" placeholder="Código de Seguridad" data-conekta="card[cvc]" maxlength="4">
 
                                     <div class="Fase-ContentLogoOpenP u-inline-block">
                                         Transacciones realizadas vía:
 
                                         <figure>
-                                            <img src="images/logoOpenpay.png" alt="Logo OpenPay">
+                                            <img src="images/logoConekta.png" alt="Logo Conekta">
                                         </figure>
                                     </div>
 
@@ -133,7 +134,7 @@
 
                     <p><strong>FORMAS DE PAGO</strong></p>
                     <ul>
-                        <li>Se aceptan pagos con tarjetas bancarias (débito y crédito) respaldadas por Visa, MasterCard y American Express, teniendo como plataforma de pago a Openpay.</li>
+                        <li>Se aceptan pagos con tarjetas bancarias (débito y crédito) respaldadas por Visa, MasterCard y American Express, teniendo como plataforma de pago a Conekta.</li>
                     </ul>
                     <p><strong>Lorem Ipsum</strong></p>
                     <ul>
@@ -156,7 +157,7 @@
 
                     <p><strong>INFORMACIÓN QUE RECOPILAMOS DE USTED EN COMPRAS EN LINEA</strong></p>
 
-                    <p><strong>NOTA:</strong> Le informamos que “ no almacena ninguna información de tarjetas de débito, crédito o método de pago como parte del procesamiento de pago. transmitimos la información de las tarjetas de débito, crédito o método de pago directamente con la plataforma Openpay.</p>
+                    <p><strong>NOTA:</strong> Le informamos que “ no almacena ninguna información de tarjetas de débito, crédito o método de pago como parte del procesamiento de pago. transmitimos la información de las tarjetas de débito, crédito o método de pago directamente con la plataforma Conekta.</p>
 
                     <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
 
