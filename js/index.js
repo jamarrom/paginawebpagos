@@ -132,8 +132,8 @@ let order_pago_id = 0;
 
 	$(document).ready(function()
   {
-		let urlB = window.location.origin;
-		alert(urlB);
+		let urlB = window.location.href;
+		//alert(urlB);
 
 		if(urlB==="https://www.bioesensi-crm.com")
 			window.location.href = "https://www.bioesensi-crm.com/?ordenPago=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRlX2lkIjoiMyIsImZlY2hhIjoiMjAyMy0wNi0xOVQxMTozNjowMi45MDJaIiwiaWF0IjoxNjg3MTc0NTYyLCJleHAiOjE2ODcyNjA5NjJ9.7G6DEIMnvrw4xa2gl9kLe8NcwAKBsnim6FawpHVIPZs";
