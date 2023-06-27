@@ -303,6 +303,13 @@ textarea::-moz-input-placeholder
 	background-color: #779737;
 }
 
+
+.RedesSociales {
+	position: relative;
+	top: -84px;
+	right: -45px;
+}
+
 .MainMenu-List {
 	display: inline-block;
 	padding-top: 13px;
@@ -1111,7 +1118,7 @@ textarea::-moz-input-placeholder
 	height: 31px;
 	background: url(../images/icoFacebook.png) no-repeat;
 	background-size: 100%;
-	margin-right: 18px;
+	margin-right: 8px;
 }
 
 .Footer-RedSocial--Instagram {
@@ -1160,24 +1167,37 @@ textarea::-moz-input-placeholder
 .ContentModificarDatos-Center {
 	max-width: 700px;
 	color: #000;
+	font-size: 15px;
+  line-height: 18px;
 	background: #ffffff;
 	padding: 20px;
 	position: relative;
-	top: 10%;
+	top: 7%;
 }
 
 .ContentModificarDatos-Center h4 {
+	font-size: 22px;
+	line-height: 26px;
 	margin-bottom: 10px;
 }
 
 .ContentModificarDatos-Center ul {
-	list-style-type: disc;
+	list-style-type: none;
 	margin-bottom: 10px;
 	margin-left: 16px;
 }
 
+.ContentModificarDatos-Center ul li {
+	margin-bottom: 4px;
+}
+
 .ContentModificarDatos-Center p {
 	margin-bottom: 10px;
+}
+
+#Terminos, #Aviso, #Politicas {
+	height: 550px;
+  overflow-y: scroll;
 }
 
 #Fase-ListAsientosEditar {
